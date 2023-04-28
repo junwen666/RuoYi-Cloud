@@ -14,12 +14,14 @@ spring:
     nacos:
       discovery:
         # 服务注册地址
-        server-addr: 127.0.0.1:8848
+        server-addr: 120.76.40.22:8848
+        namespace: 3114f134-b45e-4bfc-a265-20afd84a4e5f
       config:
         # 配置中心地址
-        server-addr: 127.0.0.1:8848
+        server-addr: 120.76.40.22:8848
         # 配置文件格式
         file-extension: yml
+        namespace: 3114f134-b45e-4bfc-a265-20afd84a4e5f
         # 共享配置
         shared-configs:
           - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
@@ -33,7 +35,8 @@ spring:
       datasource:
         ds1:
           nacos:
-            server-addr: 127.0.0.1:8848
+            server-addr: 120.76.40.22:8848
+            namespace: 3114f134-b45e-4bfc-a265-20afd84a4e5f
             dataId: sentinel-ruoyi-gateway
             groupId: DEFAULT_GROUP
             data-type: json
